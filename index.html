@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Charity Organization Punjab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#programs">Our Programs</a></li>
+                <li><a href="#donate">Donate</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Animal Charity Organization Punjab" style="height: 40px; width: 40px;">
+        </div>
+    </header>
+
+    <!-- Drawer for Mobile Navigation -->
+    <div class="drawer" id="drawer">
+        <ul class="drawer-list">
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#programs">Our Programs</a></li>
+            <li><a href="#donate">Donate</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Animal Charity Organization Punjab</h1>
+            <p>Dedicated to rescuing and rehabilitating animals in need across Punjab, India. Your support can save lives!</p>
+            <button class="btn-primary">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured">
+        <h2>Featured Programs</h2>
+        <div class="featured-container">
+            <div class="featured-program">
+                <h3>Street Animal Rescue</h3>
+                <p>We provide emergency care and rehabilitation for street animals that have been abandoned, injured, or mistreated.</p>
+                <img src="images/rescue.jpeg" alt="Street Animal Rescue" style="width:100%">
+            </div>
+            <div class="featured-program">
+                <h3>Animal Shelter & Rehabilitation</h3>
+                <p>Our shelter is a safe haven for animals that need medical care and rehabilitation, giving them a second chance at life.</p>
+                <img src="images/shelter.jpg" alt="Animal Shelter" style="width:100%">
+            </div>
+            <div class="featured-program">
+                <h3>Adoption Program</h3>
+                <p>Find your perfect companion through our adoption program, which connects rescued animals with loving families.</p>
+                <img src="images/adoption.jpg" alt="Adopt a Pet" style="width:100%">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission">
+        <h2>Our Mission</h2>
+        <p>We believe every animal deserves a life free from suffering. Our mission is to provide care, shelter, and medical attention to animals in distress while educating the public about animal rights and welfare.</p>
+        <img src="images/mission.jpg" alt="Mission Image" style="width:100%">
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <h2>Our Programs</h2>
+        <div class="program-container">
+            <div class="program">
+                <h3>Community Education</h3>
+                <p>We educate communities about animal care, responsible pet ownership, and the importance of spaying and neutering to control the population of street animals.</p>
+                <img src="images/community_education.jpeg" alt="Community Education" style="width:100%">
+            </div>
+            <div class="program">
+                <h3>Volunteer Program</h3>
+                <p>Join our team of passionate volunteers who work tirelessly to rescue, rehabilitate, and rehome animals in need.</p>
+                <img src="images/volunteers.jpg" alt="Volunteer Program" style="width:100%">
+            </div>
+            <div class="program">
+                <h3>Spay/Neuter Campaign</h3>
+                <p>We offer spay and neuter services to control the population of street animals and reduce suffering caused by overpopulation.</p>
+                <img src="images/spay_neuter_centre.jpg" alt="Spay/Neuter Campaign" style="width:100%">
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate">
+        <h2>Donate Now</h2>
+        <p>Your generous donation helps us continue our mission to save animals in need. Every contribution makes a difference in the lives of vulnerable animals. By donating, you directly support our rescue missions, medical care, shelter services, and adoption programs. Together, we can make a lasting impact on the lives of countless animals.</p>
+        <button onclick="openModal()" class="donate-btn">Donate Now</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or would like to get involved, we'd love to hear from you! Reach out via email or phone, or visit us at our shelter. Whether you're interested in volunteering, adopting a pet, or learning more about our programs, we're here to connect and collaborate with compassionate individuals like you.</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">Top</button>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Animal Charity Organization Punjab</p>
+        <ul>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#programs">Our Programs</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

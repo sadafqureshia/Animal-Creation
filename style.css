@@ -1,0 +1,440 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Global Styles */
+body {
+    color: #3E4E50;
+    background-color: #F4F4F9;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Header */
+header {
+    background-color: #00796B;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+/* Logo Styles */
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #FF7043;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #FF7043;
+    color: #FFFFFF;
+}
+
+/* Hero Section */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+#hero h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    animation: slideIn 1.2s ease;
+}
+
+#hero p {
+    font-size: 22px;
+    margin-bottom: 35px;
+    line-height: 1.8;
+    animation: fadeIn 2s ease;
+}
+
+#hero button {
+    padding: 15px 30px;
+    background-color: #FF7043;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #E64A19;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background-color: #FFFFFF;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Drawer Styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #00796B;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1001;
+}
+
+.drawer-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.drawer-list li {
+    margin-bottom: 15px;
+}
+
+.drawer-list a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Featured Section */
+#featured {
+    padding: 60px 5%;
+    background-color: #FFFFFF;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+#featured h2 {
+    font-size: 38px;
+    color: #3E4E50;
+    margin-bottom: 45px;
+    position: relative;
+    animation: slideIn 1.5s ease;
+}
+
+#featured h2::after {
+    content: '';
+    width: 70px;
+    height: 5px;
+    background-color: #00796B;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featured-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.featured-program {
+    background-color: #F4F4F9;
+    border-radius: 12px;
+    padding: 25px;
+    width: calc(30% - 50px); /* Adjust for gap */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease;
+}
+
+.featured-program:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.featured-program img {
+    border-radius: 12px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    max-height: 180px;
+}
+
+.featured-program h3 {
+    font-size: 26px;
+    color: #00796B;
+    margin-bottom: 12px;
+}
+
+.featured-program p {
+    color: #3E4E50;
+    line-height: 1.8;
+}
+
+/* Mission Section */
+#mission {
+    padding: 60px 5%;
+    background-color: #E0F2F1;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+#mission h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+    color: #00796B;
+}
+
+#mission p {
+    font-size: 20px;
+    color: #3E4E50;
+    line-height: 1.8;
+}
+
+/* Programs Section */
+#programs {
+    padding: 60px 5%;
+    background-color: #FFFFFF;
+    animation: fadeIn 1.5s ease;
+}
+
+#programs .program-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.program {
+    background-color: #F4F4F9;
+    padding: 25px;
+    border-radius: 12px;
+    width: calc(30% - 50px); /* Adjust for gap */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    animation: fadeIn 2s ease;
+}
+
+.program img {
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.program h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #FF7043;
+}
+
+.program p {
+    font-size: 18px;
+    color: #3E4E50;
+}
+
+/* Donate Section */
+#donate {
+    padding: 60px 5%;
+    background-color: #E0F2F1;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+#donate h2 {
+    font-size: 38px;
+    color: #00796B;
+    margin-bottom: 35px;
+}
+
+#donate p {
+    font-size: 20px;
+    color: #3E4E50;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+#donate button {
+    background-color: #FF7043;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donate button:hover {
+    background-color: #E64A19;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 5%;
+    background-color: #FFFFFF;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+#contact h2 {
+    font-size: 38px;
+    color: #00796B;
+    margin-bottom: 35px;
+}
+
+#contact p {
+    font-size: 20px;
+    color: #3E4E50;
+    line-height: 1.8;
+}
+
+/* Form elements */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+/* Footer */
+footer {
+    padding: 20px 30px;
+    background-color: #00796B;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #FF7043;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #E64A19;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 35px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    #featured-container,
+    #programs .program-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-program,
+    .program {
+        width: 90%; /* Full width on small screens */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: #00796B;
+        display: none; /* Initially hidden */
+    }
+
+    header nav ul.show {
+        display: flex; /* Show when menu is active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the menu toggle button */
+    }
+}
